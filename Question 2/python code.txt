@@ -1,0 +1,7 @@
+Import boto3
+session=boto3.Session(profile_name=”aws_ec2_iam_user”, region=”us-east-1”)
+vpc=ec2.vpc(“default”) #it will take default vpc for example “vpc-21c15555”
+ec2_re=session.resource(service_name=”ec2”)
+print(“Nametag”\t”Instance ID”)
+for each_in in vpc.instances.all():
+print(inst_names "\t" each_in.id)
